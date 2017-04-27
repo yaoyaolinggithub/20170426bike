@@ -6,12 +6,13 @@
  /*自定义css样式*/
 .mui-badge-white{color:white;}
 .mui-bar-nav~.mui-content {
-    padding-top: 34px;
     max-width: 640px;
+    /*min-width: 320px;*/
     margin: auto;
 }
 header{
     max-width: 640px;
+    /*min-width: 320px;*/
     margin: auto;
 }
 li{list-style: none;}

@@ -530,7 +530,26 @@
 				thisClass(detaP1,"deta-sp1-p","addat");
 				thisClass(detaP2,"deta-sp2-p","addat");
 				thisClass(detaP3,"deta-sp3-p","addat");
-				
+				//跳转结算页面
+				$.plusReady(function() {
+					var detaSopBtn = document.getElementsByClassName('mui-med-li');
+					detaSopBtn[1].addEventListener('tap', function(event) {
+						$.openWindow({
+							url: "../contents/siteCity.html",
+							id: "siteCity",
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, false);
+				});
 			})(mui);
 			// 让内容区域高度自适应
 			mui.plusReady(function(){

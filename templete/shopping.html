@@ -19,6 +19,10 @@
 			    height: 100%;
 			    line-height: 45px;
 			}
+			#shoppingHead .mui-icon{
+				font-size: 25px;
+				padding: 10px;
+			}
 			/*备份消息按钮*/
 			/*.mui-bar .mui-news-poi img {
 			    width: 5%;
@@ -33,7 +37,7 @@
 	</head>
 	<body>
 		<!--头部-->
-		<header class="mui-bar">
+		<header class="mui-bar" id="shoppingHead">
 		    <h1 class="mui-title">购物车</h1>
 		    <!--备份消息按钮-->
 		    <!--<div class="mui-news-poi"><a href="#"><img src="../images/news.png"/></a></div>-->
@@ -41,7 +45,7 @@
 		
 	</body>
 	<script type="text/javascript">
-		
+		mui.init();
 		//启用双击监听
 		mui.init({
 			subpages:[{
@@ -53,6 +57,5 @@
 				}
 			}]
 		});
-		
 	</script>
 </html>

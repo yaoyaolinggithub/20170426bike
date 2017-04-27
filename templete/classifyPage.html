@@ -1,9 +1,8 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
-		<title>列表展示</title>
+		<title>分类折叠列表展示</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -71,7 +70,41 @@
 			#classPage {
 			    padding-top: 45px;
 			}
-			   
+			#classPage .mui-collapse:after {
+			    left: 0px;
+			}
+			#classPage .mui-collapse {
+			    padding: 10px 15px;
+			}
+			#classPage .mui-navigate-right{
+				font-size: 0.95rem;
+			}
+			#classPage .mui-table-view-cell.mui-active {
+			    background-color: #f3e7e7;
+			}
+			#classPage>.mui-table-view:first-child {
+			    margin-top: 10px;
+			}
+			/*li9宫格*/
+			#classPage .mui-collapse .mui-collapse-content{
+				padding: 8px 0px;
+			}
+			#classPage .mui-grid-view,#classPage .mui-grid-view .mui-media{
+				padding: 0;
+    			margin: 0;
+    			background: white;
+    			border-right: 0px solid #eee; 
+    			border-bottom: 0px solid #eee; 
+			}
+			#classPage .mui-grid-view .mui-media:after {
+			     height: 0px; 
+			}
+			#classPage .mui-media .mui-icon img {
+			     width: 55px;
+			}
+			#classPage .mui-media .mui-media-body {
+			     font-size: 0.9rem;
+			}
 		</style>
 	</head>
 
@@ -87,16 +120,96 @@
 		<div class="mui-content" id="classPage">
 			<!--ul列表展示商品列表-->
 			<ul class="mui-table-view">
-				<li class="mui-table-view-cell mui-collapse">
-					<a class="mui-navigate-right" href="#">文字排版</a>
+				<li class="mui-table-view-cell mui-collapse mui-active">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
 					<div class="mui-collapse-content">
-						<h1>h1. Heading</h1>
-						<h2>h2. Heading</h2>
-						<h3>h3. Heading</h3>
-						<h4>h4. Heading</h4>
-						<h5>h5. Heading</h5>
-						<h6>h6. Heading</h6>
-						<p>p. Heading</p>
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">美妆彩妆</a>
+					<div class="mui-collapse-content">
+						<!--li9宫格-->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">BB霜</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">气垫BB</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">遮瑕</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">粉底液</div></a></li>
+				            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a href="#">
+				                <span class="mui-icon "><img src="../images/baixie.jpg"/></span>
+				                <div class="mui-media-body">蜜粉/散粉</div></a></li>
+				        </ul> 
 					</div>
 				</li>
 			</ul>
@@ -106,12 +219,13 @@
 		<script type="text/javascript">
 			(function($, doc) {
 				$.init();
+				// 跳转商品列表展示
 				$.plusReady(function() {
-					var detailBut = document.getElementsByClassName('mui-media')
-					detailBut[0].addEventListener('tap', function(event) {
+					var clasPagBtn = document.getElementsByClassName('mui-media')
+					clasPagBtn[0].addEventListener('tap', function(event) {
 						$.openWindow({
-							url: "details.html",
-							id: "details",
+							url: "list.html",
+							id: "list",
 							preload: true,
 							show: {
 								aniShow: 'pop-in'

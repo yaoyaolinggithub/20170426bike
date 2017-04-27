@@ -744,8 +744,26 @@
 				var muilistBut = document.getElementById('mui-list-1');
 				muilistBut.addEventListener('tap', function(event) {
 					$.openWindow({
-						url: "list.html",
-						id: "list",
+						url: "classifyPage.html",
+						id: "classifyPage",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				// 商品跳转详情页面
+				var muiflexBtn = document.getElementsByClassName('mui-flex-sm');
+				muiflexBtn[0].addEventListener('tap', function(event) {
+					$.openWindow({
+						url: "details.html",
+						id: "details",
 						preload: true,
 						show: {
 							aniShow: 'pop-in'
