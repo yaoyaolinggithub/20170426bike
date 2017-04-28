@@ -666,6 +666,7 @@
 				}, 1500);
 			}
 			mui.plusReady(function(){
+				// 跳转登录页
 				var ngBtn = document.getElementById("nglong");
 				ngBtn.addEventListener("tap",function(event){
 					mui.openWindow({
@@ -683,6 +684,7 @@
 						}
 					})
 				},false);
+				// 跳转购买  填写地址页
 				var botP4Btn = document.querySelector(".mui-botP4");
 				botP4Btn.addEventListener('tap', function(event) {
 					mui.openWindow({
@@ -691,6 +693,40 @@
 						preload: true,
 						show: {
 							aniShow: 'none'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
+				// 推荐LI批量进入详情页
+				mui("#ngCom").on('tap','.mui-rig1',function(event){
+					mui.openWindow({
+						url: "../templete/details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				mui(".mui-welfare").on('tap','.mui-similar-li',function(event){
+					mui.openWindow({
+						url: "../templete/details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
 						},
 						styles: {
 							popGesture: 'hide'

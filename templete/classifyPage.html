@@ -215,32 +215,50 @@
 			</ul>
 		</div>
 		
-		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			(function($, doc) {
-				$.init();
-				// 跳转商品列表展示
-				$.plusReady(function() {
-					var clasPagBtn = document.getElementsByClassName('mui-media')
-					clasPagBtn[0].addEventListener('tap', function(event) {
-						$.openWindow({
-							url: "list.html",
-							id: "list",
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, false);
-				});
-			}(mui, document));
-		</script>
+		
 	</body>
-
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($, doc) {
+			$.init();
+			// 跳转商品列表展示
+			$.plusReady(function() {
+				// 备份单个跳转详情页
+//				var clasPagBtn = doc.getElementsByClassName('mui-media');
+//				clasPagBtn[0].addEventListener('tap', function(event) {
+//					$.openWindow({
+//						url: "list.html",
+//						id: "list",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//				}, false);
+				// 批量进入列表页页
+				mui("#classPage").on('tap','.mui-col-xs-3',function(event){
+					$.openWindow({
+						url: "list.html",
+						id: "list",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+			});
+		}(mui, document));
+	</script>	
 </html>

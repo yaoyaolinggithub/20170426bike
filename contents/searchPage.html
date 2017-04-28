@@ -183,6 +183,25 @@
 	</body>
 	<script src="../js/mui.min.js"></script>
 	<script type="text/javascript">
-		mui.init()
+		mui.init();
+		// 小统一分类批量点击进入列表页事件
+		mui.plusReady(function() {
+			mui("#seaPage").on('tap','.mui-media',function(event){
+				mui.openWindow({
+					url: "../templete/details.html",
+					id: "details",
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}, false);
+		});
 	</script>
 </html>

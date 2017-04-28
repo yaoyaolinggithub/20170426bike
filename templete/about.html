@@ -191,7 +191,7 @@
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
 			        <span class="mui-icon iconfont icon-jiaoyin-copy"></span>
 			        <div class="mui-media-body">浏览记录</div></a></li>
-			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3  mui-about-ser"><a href="#">
 			        <span class="mui-icon iconfont icon-kefu"></span>
 			        <div class="mui-media-body">客服服务</div></a></li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
@@ -205,12 +205,13 @@
 		mui.init();
 		var abologBtn = document.getElementById('abolog');
 		var muiSeBtn = document.getElementsByClassName("mui-se1");
+		var aboutserBtn = document.getElementsByClassName("mui-about-ser");
 		mui.plusReady(function(){
 			abologBtn.addEventListener('tap',function(){
 				mui.openWindow({
 					url: "login.html",
 					id: "login",
-					preload: true,
+//					preload: true,
 					styles: {
 						popGesture: 'hide'
 					},
@@ -226,7 +227,24 @@
 				mui.openWindow({
 					url:"setting.html",
 					id:"setting",
-					preload:true,
+//					preload:true,
+					show:{
+						aniShow:"none"
+					},
+					styles:{
+						popGesture:"hide"
+					},
+					waiting:{
+						autoShow:false
+					}
+				})
+			},false)
+			
+			aboutserBtn[0].addEventListener("tap",function(event){
+				mui.openWindow({
+					url:"service.html",
+					id:"service",
+//					preload:true,
 					show:{
 						aniShow:"none"
 					},

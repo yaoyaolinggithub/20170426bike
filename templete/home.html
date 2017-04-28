@@ -33,6 +33,7 @@
 				position: relative;
 			}
 			.mui-input-reserve span{
+				font-weight:200;
 				font-size: 13px;
 				position: absolute;
 				right: 0.1rem;
@@ -62,7 +63,7 @@
   				align-content: space-between;
 			}
 			.mui-row-colour{
-				padding: 0px 10px;
+				padding: 10px 0px;
   				background: rgb(243, 243, 243);
 			}
 			.mui-row-flex .mui-flex-item{
@@ -76,13 +77,20 @@
 
 			}
 			.mui-row-flex .mui-flex-item .mui-flex-img img{
-				width: 90%;
+				width: 70%;
 				display:block;
 				margin: auto;
 			}
 			.mui-row-flex .mui-flex-item .mui-flex-p {
 				text-align: center;
 				font-size: 0.8rem;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
 			}
 			/*图片展示*/
 			.mui-content .show img{
@@ -119,6 +127,13 @@
 				margin-top: 5px;
 				color: gray;
 				font-weight:normal ;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
 			}
 			.mui-flex-xs .mui-flex-hot{
 				font-size: 0.6rem;
@@ -138,8 +153,16 @@
 				position: relative;
 			}
 			.mui-row-flex-comm .mui-flex-li .mui-flex-comp{
-				font-size: 0.7rem;
+				font-size: 0.8rem;
 				color: gray;
+				overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 1;
+			    -webkit-box-orient: vertical;
+			    display: box;
+			    line-clamp: 1;
+			    box-orient: vertical;
+			    margin-bottom: 2px;
 			}
 			.mui-row-flex-comm .mui-flex-li .mui-flex-li-img{
 				width: 100%;
@@ -338,30 +361,30 @@
 			</div>
 		</header>
 		<!--内容-->
-		<div class="mui-content" >
+		<div class="mui-content" id="homeBtna">
 			<!--轮播图-->
 			<div class="mui-slider">
 				<div class="mui-slider-group mui-slider-loop">
 					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img class="muiitemimg5" src="http://019020.com/data/afficheimg/20161018ysknwu.jpg"/></a>
+						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="#"><img class="http://biksc.com/data/afficheimg/20170330qyxvjj.jpg"/></a>
+						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg2" src="http://biksc.com/data/afficheimg/20170330lvntew.jpg"/></a>
+						<a href="#"><img class="muiitemimg2" src="../images/carr2.png"/></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg3" src="http://biksc.com/data/afficheimg/20170414yazxmw.jpg"/></a>
+						<a href="#"><img class="muiitemimg3" src="../images/carr3.jpg"/></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg4" src="http://biksc.com/data/afficheimg/20170413ztqhtj.jpg"/></a>
+						<a href="#"><img class="muiitemimg4" src="../images/carr4.jpg"/></a>
 					</div>
 					<div class="mui-slider-item">
-						<a href="#"><img class="muiitemimg5" src="http://019020.com/data/afficheimg/20161018ysknwu.jpg"/></a>
+						<a href="#"><img class="muiitemimg5" src="../images/carr5.jpg"/></a>
 					</div>
 					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img class="muiitemimg1" src="http://biksc.com/data/afficheimg/20170330qyxvjj.jpg"/></a>
+						<a href="#"><img class="muiitemimg1" src="../images/carr1.jpg"/></a>
 					</div>
 				</div>
 				<div class="mui-slider-indicator">
@@ -373,7 +396,7 @@
 				</div>
 			</div>
 			<!--flex布局  分类-->
-			<div class="mui-row-flex mui-row-colour">
+			<div class="mui-row-flex mui-row-colour" id="niceBtn">
 		        <div class="mui-flex-item" id="mui-list-1">
 		        	<div class="mui-flex-img"><img src="../images/pink.png"/></div>
 		        	<div class="mui-flex-p">服饰鞋帽</div>
@@ -603,14 +626,6 @@
 		        	</div>
 		        </div>
 		    </div>
-		    <!--flex布局  商品-->
-		    <div class="mui-row-flex-comm">
-		    	
-		    </div>
-		    <!--flex布局  商品-->
-		    <div class="mui-row-flex-comm">
-		    
-		    </div>
 		    <!--推荐提示-->
 		  	<div class="mui-gray-text">
 		  		<span class="mui-gray-layout">
@@ -739,10 +754,31 @@
 			// 轮播图自动播放
 			var slider = mui('.mui-slider');
 			slider.slider({interval:2000});
+			
 			$.plusReady(function() {
-				// 9宫格跳转新页面
+				// 备份单个 9宫格跳转新页面
+				/*
 				var muilistBut = document.getElementById('mui-list-1');
 				muilistBut.addEventListener('tap', function(event) {
+					$.openWindow({
+						url: "classifyPage.html",
+						id: "classifyPage",
+						preload: true,
+						show: {
+							aniShow: 'slide-in-right'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				*/
+				// 批量9宫格进入列表页
+//				var homeBtna = document.getElementById("#niceBtn");
+				mui("#niceBtn").on('tap','.mui-flex-item',function(event){
 					$.openWindow({
 						url: "classifyPage.html",
 						id: "classifyPage",
@@ -758,9 +794,44 @@
 						}
 					});
 				}, false);
-				// 商品跳转详情页面
-				var muiflexBtn = document.getElementsByClassName('mui-flex-sm');
-				muiflexBtn[0].addEventListener('tap', function(event) {
+				// 单个商品跳转详情页面
+//				var muiflexBtn = document.getElementsByClassName('mui-flex-sm');
+//				muiflexBtn[0].addEventListener('tap', function(event) {
+//					$.openWindow({
+//						url: "details.html",
+//						id: "details",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//				}, false);
+				
+				// 批量进入商品详情页
+				mui("#homeBtna").on('tap','.mui-flex-sm',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						createNew:true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				mui("#homeBtna").on('tap','.mui-flex-li',function(event){
 					$.openWindow({
 						url: "details.html",
 						id: "details",
@@ -776,6 +847,39 @@
 						}
 					});
 				}, false);
+				mui("#homeBtna").on('tap','.mui-similar-li',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				mui("#homeBtna").on('tap','.mui-slider-item',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
 				//搜索框跳转
 				var muiinpBtn = document.getElementById('muiinp');
 				muiinpBtn.addEventListener('tap', function(event) {

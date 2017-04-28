@@ -156,31 +156,52 @@
 			</ul>
 		</div>
 		
-		<script src="../js/mui.min.js"></script>
-		<script type="text/javascript">
-			(function($, doc) {
-				$.init();
-				$.plusReady(function() {
-					var detailBut = document.getElementsByClassName('mui-media')
-					detailBut[0].addEventListener('tap', function(event) {
-						$.openWindow({
-							url: "details.html",
-							id: "details",
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					}, false);
-				});
-			}(mui, document));
-		</script>
+		
+		
 	</body>
-
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		(function($, doc) {
+			$.init();
+			// 备份 单个点击进入详情页
+//			$.plusReady(function() {
+//				var detailBut = doc.getElementsByClassName('mui-media')
+//				detailBut[0].addEventListener('tap', function(event) {
+//					$.openWindow({
+//						url: "details.html",
+//						id: "details",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//				}, false);
+//			});
+			//批量进入详情页
+			$.plusReady(function() {
+				mui("#mui-ul-li").on('tap','.mui-media',function(event){
+					$.openWindow({
+						url: "details.html",
+						id: "details",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+			});
+		}(mui, document));
+	</script>	
 </html>

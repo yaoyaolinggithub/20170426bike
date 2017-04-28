@@ -680,6 +680,28 @@
 					}
 				}, 1500);
 			}
+		// 批量进入详情页
+		(function($, doc) {
+			$.init();
+			$.plusReady(function() {
+				mui("#ndrefresh").on('tap','.mui-clearfix',function(event){
+					$.openWindow({
+						url: "../templete/list.html",
+						id: "list",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+			});
+		}(mui, document));
 			// 回到顶部
 			window.onload = function(){
 			    var obtn = document.getElementById('ndcont-btn-top');  //获取回到顶部按钮的ID
