@@ -201,14 +201,14 @@
 			}, false);
 		});
 		$.plusReady(function(){
-			var siteCBtn = document.getElementById("siteCbtn");
+			var siteCBtn = doc.getElementById("siteCbtn");
 			siteCBtn.addEventListener("tap",function(event){
 				$.openWindow({
 					url:"indents.html",
 					id:"indents",
 					preload:true,
 					show:{
-						aniShow:"none"
+						aniShow:"pop-in"
 					},
 					styles:{
 						popGesture:"hide"

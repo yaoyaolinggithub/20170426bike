@@ -76,7 +76,8 @@
   "templete/guid.html": {
     "resources": [
       "images/welcome.png",
-      "css/mui.min.css"
+      "css/mui.min.css",
+      "js/mui.min.js"
     ],
     "refer": []
   },
@@ -96,13 +97,18 @@
       "js/mui-btn-top.js",
       "images/top_ni.png",
       "images/top.png",
-      "contents/mecont.html"
+      "contents/mecont.html",
+      "images/carr5.jpg",
+      "images/carr2.png",
+      "images/carr4.jpg"
     ],
     "refer": [
       "contents/mecont.html",
       "templete/list.html",
       "contents/searchPage.html",
-      "templete/classifyPage.html"
+      "templete/classifyPage.html",
+      "templete/login.html",
+      "templete/details.html"
     ]
   },
   "templete/classify.html": {
@@ -113,7 +119,8 @@
       "js/mui.min.js"
     ],
     "refer": [
-      "contents/fycont.html"
+      "contents/fycont.html",
+      "contents/searchPage.html"
     ]
   },
   "contents/fycont.html": {
@@ -122,7 +129,9 @@
       "images/carr1.jpg",
       "js/mui.min.js"
     ],
-    "refer": []
+    "refer": [
+      "templete/list.html"
+    ]
   },
   "contents/mecont.html": {
     "resources": [
@@ -159,6 +168,9 @@
       "fonts/mui.ttf",
       "css/mui.min.css",
       "images/top.png"
+    ],
+    "refer": [
+      "templete/list.html"
     ]
   },
   "templete/shopping.html": {
@@ -185,7 +197,8 @@
     "refer": [
       "templete/login.html",
       "contents/site.html",
-      "contents/siteCity.html"
+      "contents/siteCity.html",
+      "templete/details.html"
     ]
   },
   "templete/about.html": {
@@ -198,10 +211,13 @@
       "js/mui.min.js",
       "fonts/mui.ttf",
       "css/mui.min.css",
-      "templete/login.html"
+      "templete/login.html",
+      "images/aboutBJ.png"
     ],
     "refer": [
-      "templete/login.html"
+      "templete/login.html",
+      "templete/setting.html",
+      "templete/service.html"
     ]
   },
   "templete/login.html": {
@@ -219,7 +235,8 @@
     "refer": [
       "templete/main.html",
       "templete/reg.html",
-      "templete/forget_password.html"
+      "templete/forget_password.html",
+      "templete/unlock.html"
     ]
   },
   "templete/main.html": {
@@ -227,7 +244,9 @@
       "templete/setting.html"
     ],
     "resources": [
-      "css/mui.min.css"
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/app.js"
     ]
   },
   "templete/setting.html": {
@@ -241,14 +260,24 @@
       "css/feedback-page.css",
       "js/feedback-page.js",
       "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-      "js/mui.view.js"
+      "js/mui.view.js",
+      "js/mui.min.js",
+      "js/app.js",
+      "images/bike.jpg",
+      "images/bikecode.png"
+    ],
+    "refer": [
+      "templete/about.html"
     ]
   },
   "templete/forget_password.html": {
     "resources": [
       "css/style.css",
-      "css/mui.min.css"
-    ]
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": []
   },
   "templete/list.html": {
     "resources": [
@@ -277,14 +306,20 @@
   "contents/deal1But.html": {
     "resources": [
       "css/mui.min.css",
-      "css/style.css"
-    ]
+      "css/style.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": []
   },
   "contents/deal2But.html": {
     "resources": [
       "css/mui.min.css",
-      "css/style.css"
-    ]
+      "css/style.css",
+      "js/mui.min.js",
+      "js/app.js"
+    ],
+    "refer": []
   },
   "templete/details.html": {
     "resources": [
@@ -292,16 +327,22 @@
       "images/detail.jpg",
       "font_about/iconfont.woff",
       "font_about/iconfont.css",
-      "images/carr1.jpg"
+      "images/carr1.jpg",
+      "js/mui.min.js"
     ],
     "refer": [
-      "templete/shopping.html"
+      "templete/shopping.html",
+      "contents/siteCity.html"
     ]
   },
   "contents/searchPage.html": {
     "resources": [
       "css/mui.min.css",
-      "images/seapage.png"
+      "images/seapage.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "templete/details.html"
     ]
   },
   "contents/site.html": {
@@ -316,7 +357,8 @@
       "sitejs/mui.poppicker.js",
       "js/mui.min.js",
       "css/mui.min.css"
-    ]
+    ],
+    "refer": []
   },
   "contents/siteCity.html": {
     "resources": [
@@ -339,8 +381,11 @@
     "resources": [
       "images/cai.png",
       "images/comm.jpg",
-      "images/site.png"
-    ]
+      "images/site.png",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
   },
   "templete/classifyPage.html": {
     "resources": [
@@ -353,5 +398,28 @@
     "refer": [
       "templete/list.html"
     ]
+  },
+  "templete/service.html": {
+    "href": "templete/service.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "templete/unlock.html": {
+    "href": "templete/unlock.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/mui.locker.js",
+      "js/app.js"
+    ],
+    "refer": [
+      "templete/login.html",
+      "templete/main.html"
+    ],
+    "priority": 0
   }
 }
