@@ -1,8 +1,9 @@
 		mui.init({
-			statusBarBackground: '#9defbcg',
+			//原生顶部导航栏颜色
+//			statusBarBackground: '#9defbcg',
 		})
 		jumpPage();
-
+		
 		function jumpPage() {
 			//跳转页面
 			var subpages = [
@@ -33,9 +34,10 @@
 					};
 					self.append(sub);
 				};
-				plus.webview.currentWebview().setStyle({
-					softinputMode:"adjustResize"
-				});
+				// 
+//				plus.webview.currentWebview().setStyle({
+//					softinputMode:"adjustResize"
+//				});
 //				document.getElementById('nav-import-bot').style.top = (plus.display.resolutionHeight - 45) + "px";
 
 			});
@@ -83,17 +85,16 @@
 		// 开机引导图函数
 		function lanchScreen() {
 			// 先取用户首次登陆标识  plus是H5+接口方法
-			var showGuid = plus.storage.getItem("lunchFlag");
-			// 判断用户是否登陆  测试改成false每次运行都会显示
+			var showGuid = plus.storage.getItem("first");
+			// 判断用户是否登陆  测试改成0每次运行都会显示   if(showGuid)会第一次安装显示
 			if(showGuid) {
-				// 有值说明已经登陆过了.无需显示
-				// 关闭splash页面
+				// 有值说明已经登陆过了.无需显示   关闭splash页面
 				plus.navigator.closeSplashscreen();
 				plus.navigator.setFullscreen(false);
 			} else {
 				// 如果首次登陆,显示启动导航
 				mui.openWindow({
-					id: 'guids',
+					id: 'guid',
 					url: 'templete/guid.html',
 					show: {
 						aniShow: 'none'

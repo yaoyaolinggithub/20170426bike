@@ -195,12 +195,13 @@
 					showCityPickerButton.style.width = "auto";
 					showCityPickerButton.innerText =(items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text + "   >";
 					
-					//返回 false 可以阻止选择框的关闭
+					//返回 false 可以阻止城市选择框的关闭
 					//return false;
 				});
 			}, false);
 		});
 		$.plusReady(function(){
+			// 跳转商品结算页面
 			var siteCBtn = doc.getElementById("siteCbtn");
 			siteCBtn.addEventListener("tap",function(event){
 				$.openWindow({

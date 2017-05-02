@@ -297,17 +297,15 @@
 			
 			<div id="slider" class="mui-slider">
 				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					
 					<a class="mui-control-item mui-active" href="#item1mobile">
-				商品
-			</a>
+						商品
+					</a>
 					<a class="mui-control-item" href="#item2mobile">
-				详情
-			</a>
+						详情
+					</a>
 					<a class="mui-control-item" href="#item3mobile">
-				评价
-			</a>
-				
+						评价
+					</a>
 				</div>
 				<!--<div id="sliderProgressBar"   class="mui-slider-progress-bar mui-col-xs-4"></div>-->
 				<!--商品指导总体-->
@@ -450,7 +448,6 @@
 			</div>
 			<!--底部固定栏-->
 			<div class="mui-nav-sop">
-
 				<ul class="mui-table-view mui-grid-view mui-grid-9" id="details-nav">
 				    <li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3"><a href="#">
 				        <span class="mui-icon iconfont icon-kefu"></span>
@@ -474,93 +471,112 @@
 	
 	<script src="../js/mui.min.js"></script>
 	<script type="text/javascript">
-			(function($) {
-				$.init({
-					swipeBack: false
-				});
-				//获得slider插件对象轮播图片
-				var gallery = mui('#mui-details-li');
-				gallery.slider({
-				  interval:0//自动轮播周期，若为0则不自动播放，默认为0；
-				});
-				$('.mui-scroll-wrapper').scroll({
-					indicators: true //是否显示滚动条
-				});
-				var html2 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div class="spin-lis"><ul id="spin-ul"><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li></ul></div>';
-				var html3 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div id="spin3"><ul class="spin3-ul"><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li></ul></div>';
-				var item2 = document.getElementById('item2mobile');
-				var item3 = document.getElementById('item3mobile');
-				var detanav = document.getElementsByClassName("mui-nav-sop");
-				document.getElementById('slider').addEventListener('slide', function(e) {
-					if (e.detail.slideNumber === 1) {
-						if (item2.querySelector('.mui-loading')) {
-							setTimeout(function() {
-								item2.querySelector('.mui-scroll').innerHTML = html2;
-							}, 500);
-						}
-					} else if (e.detail.slideNumber === 2) {
-						if (item3.querySelector('.mui-loading')) {
-							setTimeout(function() {
-								item3.querySelector('.mui-scroll').innerHTML = html3;
-							}, 500);
-						}
+		(function($) {
+			$.init({
+				swipeBack: false
+			});
+			//获得slider插件对象轮播图片
+			var gallery = mui('#mui-details-li');
+			gallery.slider({
+				interval:0//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			$('.mui-scroll-wrapper').scroll({
+				indicators: true //是否显示滚动条
+			});
+			var html2 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div class="spin-lis"><ul id="spin-ul"><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li><li class="spin-li"><img src="../images/carr1.jpg"/> </li></ul></div>';
+			var html3 = '<div class="spin-p">三星（SAMSUNG）UA55KUF30ZJXXZ 55英寸 HDR 4K超高清 智能电视 黑色</div><div id="spin3"><ul class="spin3-ul"><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li><li class="spin3-li">钱***2 评论：宝贝很好，很喜欢	</li></ul></div>';
+			var item2 = document.getElementById('item2mobile');
+			var item3 = document.getElementById('item3mobile');
+			document.getElementById('slider').addEventListener('slide', function(e) {
+				if (e.detail.slideNumber === 1) {
+					if (item2.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item2.querySelector('.mui-scroll').innerHTML = html2;
+						}, 500);
 					}
-				});
-				
-				
-				// 选取样式
-				function thisClass(elem,elems,elemclass){
-					for(var i = 0; i<elem.length; i++){
-						elem[i].addEventListener("click",function(){
-							for (var i = 0; i < elem.length; i++) {
-								elem[i].className = elems;
-								if(this.className != elemclass){
-									this.classList.add(elemclass);
-								}
-							}
-						})
+				} else if (e.detail.slideNumber === 2) {
+					if (item3.querySelector('.mui-loading')) {
+						setTimeout(function() {
+							item3.querySelector('.mui-scroll').innerHTML = html3;
+						}, 500);
 					}
 				}
-				var detaP1 = document.querySelectorAll(".deta-sp1-p");
-				var detaP2 = document.querySelectorAll(".deta-sp2-p");
-				var detaP3 = document.querySelectorAll(".deta-sp3-p");
-				thisClass(detaP1,"deta-sp1-p","addat");
-				thisClass(detaP2,"deta-sp2-p","addat");
-				thisClass(detaP3,"deta-sp3-p","addat");
-				//跳转结算页面
-				$.plusReady(function() {
-					// 让内容区域高度自适应
-					mui('.mui-scroll-wrapper').scroll({
-				        indicators: true //是否显示滚动条
-				    });
-				    var resolutionHeight = window.innerHeight;
-				    resolutionHeight = resolutionHeight-95;
-					document.getElementById("item1mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
-					document.getElementById("item2mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
-					document.getElementById("item3mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
-					var detaSopBtn = document.getElementById('detailsBtnli');
-					// 已经跳转一次页面了 但是还是本来这个页面
+			});	
+			// 选取样式
+			function thisClass(elem,elems,elemclass){
+				for(var i = 0; i<elem.length; i++){
+					elem[i].addEventListener("click",function(){
+						for (var i = 0; i < elem.length; i++) {
+							elem[i].className = elems;
+							if(this.className != elemclass){
+								this.classList.add(elemclass);
+							}
+						}
+					})
+				}
+			}
+			var detaP1 = document.querySelectorAll(".deta-sp1-p");
+			var detaP2 = document.querySelectorAll(".deta-sp2-p");
+			var detaP3 = document.querySelectorAll(".deta-sp3-p");
+			thisClass(detaP1,"deta-sp1-p","addat");
+			thisClass(detaP2,"deta-sp2-p","addat");
+			thisClass(detaP3,"deta-sp3-p","addat");
+			//跳转结算页面
+			$.plusReady(function() {
+				// 让内容区域高度自适应
+				mui('.mui-scroll-wrapper').scroll({
+			        indicators: true //是否显示滚动条
+			    });
+			    var resolutionHeight = window.innerHeight;
+			    resolutionHeight = resolutionHeight-95;
+				document.getElementById("item1mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
+				document.getElementById("item2mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
+				document.getElementById("item3mobile").setAttribute("style","min-height:"+resolutionHeight+"px;");
+				//单个跳转有bug
+//				var detaSopBtn = document.getElementById('detailsBtnli');
+//				detaSopBtn.addEventListener('tap',function(event){
+//					alert("测试跳转");
+//					$.openWindow({
+//						url: "../contents/siteCity.html",
+//						id: "siteCity",
+//						preload: true,
+//						show: {
+//							aniShow: 'pop-in'
+//						},
+//						styles: {
+//							popGesture: 'hide'
+//						},
+//						waiting: {
+//							autoShow: false
+//						}
+//					});
+//					// 冒泡管理 
+////					event.stopPropagation();
+//				}, false);
 
-						detaSopBtn.addEventListener('tap',function(event){
-//							alert("测试跳转");
-							$.openWindow({
-								url: "../contents/siteCity.html",
-								id: "siteCity",
-								preload: true,
-								show: {
-									aniShow: 'pop-in'
-								},
-								styles: {
-									popGesture: 'hide'
-								},
-								waiting: {
-									autoShow: false
-								}
-							});
-						}, false);
-				});
-			})(mui);
+				// 绑定跳转试试
+				mui("#details-nav").on('tap','#mui-detal-a2',function(event){
+					$.openWindow({
+						url: "../contents/siteCity.html",
+						id: "siteCity",
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+				
+			});
+				
 			
+		})(mui);
+
 			
 	</script>
 </html>
