@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>页面广告页</title>
+		<title>启动app广告页</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -50,18 +50,16 @@
 	</body>
 	<script src="../js/mui.min.js"></script>
 	<script>
-		mui.back = function() {};
-		mui.plusReady(function() {
-			plus.navigator.setFullscreen(true);
-			plus.navigator.closeSplashscreen();
-		});
-		
-		//立即体验按钮点击事件
-		document.getElementById("dodgerBtn").addEventListener('tap', function(event) {
-			plus.storage.setItem("first", "true"); 
-			plus.navigator.setFullscreen(false);
-			plus.webview.currentWebview().close();
-		}, false);
-		
+//		mui.back = function() {};
+//		mui.plusReady(function() {
+//			plus.navigator.setFullscreen(true);
+//			plus.navigator.closeSplashscreen();
+//		});
+//		//立即体验按钮点击事件
+//		document.getElementById("dodgerBtn").addEventListener('tap', function(event) {
+//			plus.storage.setItem("first", "true"); 
+//			plus.navigator.setFullscreen(false);
+//			plus.webview.currentWebview().close();
+//		}, false);
 	</script>
 </html>
